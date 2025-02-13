@@ -6,7 +6,8 @@
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "postinstall": "pnpm sst install && cp -r sst-platform-override/* .sst/platform/"
   },
   "dependencies": {
     "@react-router/node": "^7.1.5",
@@ -14,11 +15,13 @@
     "isbot": "^5.1.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.1.5"
+    "react-router": "^7.1.5",
+    "sst": "3.8.8"
   },
   "devDependencies": {
     "@react-router/dev": "^7.1.5",
     "@tailwindcss/vite": "^4.0.0",
+    "@types/aws-lambda": "8.10.147",
     "@types/node": "^20",
     "@types/react": "^19.0.1",
     "@types/react-dom": "^19.0.1",
