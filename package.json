@@ -1,5 +1,6 @@
 {
-  "name": "rr7-x-sst",
+  "name": "react-router-7-x-sst-template",
+  "author": "ironheart122",
   "private": true,
   "type": "module",
   "scripts": {
@@ -7,7 +8,8 @@
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
-    "postinstall": "pnpm sst install && cp -r sst-platform-override/* .sst/platform/"
+    "postinstall": "pnpm sst install && cp -r sst-platform-override/* .sst/platform/",
+    "sso": "aws sso login --sso-session=kyroslabs --no-browser"
   },
   "dependencies": {
     "@react-router/node": "^7.1.5",
